@@ -1,0 +1,108 @@
+<div class="workspaceContainer">
+    <h3 style="margin-top:40px;">HTTP methods just checking HotSwap</h3>
+    <hr/>
+    <table class="table table-bordered">
+        <thead style="background: #D9EDF7">
+        <tr>
+            <th class="col-md-1">Method</th>
+            <th class="col-md-4">URL</th>
+            <th class="col-md-2">Parameters</th>
+            <th class="col-md-5">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td><code>GET</code></td>
+            <td><b>api-cells/</b>{assayName}</td>
+            <td>assayName</td>
+            <td>Lists all cells available for specified assay.</td>
+        </tr>
+
+        <tr>
+            <td><code>GET</code></td>
+            <td><b>api-perturbations/</b>{assayName}</td>
+            <td>assayName</td>
+            <td>Lists all perturbations available for specified assay.</td>
+        </tr>
+
+        <tr>
+            <td><code>GET</code></td>
+            <td><b>api-gct/</b>{assayName};cells=;perturbations=</td>
+            <td>assayName <br/>
+                cells (optional) <br/>
+                perturbations (optional)
+            </td>
+            <td>Builds a GCT file #1.3 for specified assay with filtering of profiles based on given cells and
+                perturbations. Cell ids and perturbations names are optional and may be separated by comma.
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>GET</code></td>
+            <td><b>api-normalized-gct/</b>{assayName};cells=;perturbations=</td>
+            <td>assayName <br/>
+                cells (optional) <br/>
+                perturbations (optional)
+            </td>
+            <td>Builds a GCT file #1.3 with <strong>quantile normalized values</strong> of specified assay with filtering of profiles based on given cells and
+                perturbations. Cell ids and perturbations names are optional and may be separated by comma.
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>GET</code></td>
+            <td><b>api-panorama</b></td>
+            <td>-</td>
+            <td>Lists all GCT files available in <a href="http://www.panoramaweb.org">Panorama</a>.
+                In returned json, two fields t1 and t2 stand for file name and file URL.
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+
+
+    <br/><br/>
+
+    <h3>Examples</h3>
+    <hr/>
+        <pre style="">
+            <p>1. List of cells in GCP assay: <br/><a href="api-cells/GCP" target="_blank">eh3.uc.edu/pilincs/<b>api-cells/GCP</b></a>
+            </p>
+                <!--<img width="7%" src="img/cells.png">-->
+            <p style="padding-top: 0px;">2. List of perturbations in P100 assay: <br/><a href="api-perturbations/P100"
+                                                                                         target="_blank">eh3.uc.edu/pilincs/<b>api-perturbations/P100</b></a>
+            </p>
+                <!--<img width="10%" src="img/perturbations.png">-->
+            <p style="padding-top: 0px;">3. GCT file based on P100 assay with cell PC3 and perturbation equal to DMSO or
+                methylstat. <br/><a
+                        href="api-gct/P100;cells=PC3;perturbations=DMSO,methylstat"
+                        target="_blank">eh3.uc.edu/pilincs/<b>api-gct/P100;cells=PC3;perturbations=DMSO,methylstat</b></a>
+            </p>
+                <img width="70%" src="img/prm.png">
+            <p style="padding-top: 60px;">4. GCT file with all profiles from GCP assay.<br/><a href="api-gct/GCP"
+                                                                                               target="_blank">eh3.uc.edu/pilincs/<b>api-gct/GCP</b></a>
+            </p>
+                <img width="60%" src="img/gcp.png">
+
+            <p style="padding-top: 60px;">5. Quantile normalized GCT file with all profiles from GCP assay.<br/><a href="api-normalized-gct/GCP"
+                                                                                               target="_blank">eh3.uc.edu/pilincs/<b>api-normalized-gct/GCP</b></a>
+            </p>
+            <p style="padding-top: 60px;">6. List all GCT files in Panorama (slow): <br/><a href="api-panorama"
+                                                                                            target="_blank">eh3.uc.edu/pilincs/<b>api-panorama</b></a>
+            </p>
+                <!--<img width="80%" src="img/panorama.png">-->
+
+        </pre>
+
+    <br/><br/>
+
+    <h3>Comments</h3>
+    <hr/>
+
+    <div class="bs-callout bs-callout-primary">
+        <p>Output was imported into Excel in examples 3 and 4.</p>
+
+    </div>
+</div>

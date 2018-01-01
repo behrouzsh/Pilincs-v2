@@ -1,0 +1,56 @@
+buildscript {
+    repositories {
+        jcenter()
+//        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.6.RELEASE")
+        classpath("org.springframework:springloaded:1.2.0.RELEASE")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+}
+
+jar {
+    baseName = 'pilincs'
+    version = '1.0.0'
+}
+// tag::version[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+// end::version[]
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.2.5.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'1.2.5.RELEASE'
+    compile group: 'com.h2database', name: 'h2', version:'1.4.187'
+    compile group: 'org.labkey', name: 'labkey-client-api', version:'0.1'
+    compile(group: 'org.apache.httpcomponents', name: 'httpclient', version:'4.4.1') {
+exclude(module: 'commons-logging')
+    }
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version:'1.1'
+    compile group: 'mysql', name: 'mysql-connector-java', version:'5.1.35'
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.0'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    compile group: 'com.google.code.gson', name: 'gson', version:'1.7.2'
+//    compile 'com.github.lbehnke:hierarchical-clustering-java:v1.1.0'
+    testCompile 'junit:junit:4.12'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}

@@ -1,0 +1,427 @@
+/* Hide scrollbars */
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Tags input */
+
+tags-input .host {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%
+}
+
+/* Hide ng-cloak etc. in Angular */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+/* UI Grid */
+
+/*.ui-grid-viewport, .ui-grid-canvas{*/
+/*height: auto !important;*/
+/*}*/
+
+.rawGrid {
+    width: 1138px;
+    height: 550px;
+    text-align: right;
+}
+
+.profilesGrid {
+    width: 1138px;
+    height: 500px;
+    text-align: right;
+}
+
+.grid-align {
+    text-align: center;
+}
+
+.grid-align-left {
+    text-align: left;
+}
+
+/* Don't underline a in button*/
+button > a:hover {
+    text-decoration: none;
+}
+
+/* Sticky footer */
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 80px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 30px;
+    background-color: #f5f5f5;
+}
+
+/* Callouts */
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+
+.bs-callout code {
+    border-radius: 3px;
+}
+
+.bs-callout + .bs-callout {
+    margin-top: -5px;
+}
+
+.bs-callout-default {
+    border-left-color: #777;
+}
+
+.bs-callout-default h4 {
+    color: #777;
+}
+
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+
+.bs-callout-success h4 {
+    color: #5cb85c;
+}
+
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+
+.bs-callout-danger h4 {
+    color: #d9534f;
+}
+
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
+
+/* Loading heatmap*/
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+/* Color scale */
+
+.cs-19 {
+    fill: rgb(127, 39, 4)
+}
+
+.cs-18 {
+    fill: rgb(166, 54, 3)
+}
+
+.cs-17 {
+    fill: rgb(217, 72, 1)
+}
+
+.cs-16 {
+    fill: rgb(241, 105, 19)
+}
+
+.cs-15 {
+    fill: rgb(253, 141, 60)
+}
+
+.cs-14 {
+    fill: rgb(253, 174, 107)
+}
+
+.cs-13 {
+    fill: rgb(253, 208, 162)
+}
+
+.cs-12 {
+    fill: rgb(254, 230, 206)
+}
+
+.cs-11 {
+    fill: rgb(255, 245, 235)
+}
+
+.cs-10 {
+    fill: white
+}
+
+.cs-9 {
+    fill: rgb(247, 251, 255)
+}
+
+.cs-8 {
+    fill: rgb(222, 235, 247)
+}
+
+.cs-7 {
+    fill: rgb(198, 219, 239)
+}
+
+.cs-6 {
+    fill: rgb(158, 202, 225)
+}
+
+.cs-5 {
+    fill: rgb(107, 174, 214)
+}
+
+.cs-4 {
+    fill: rgb(66, 146, 198)
+}
+
+.cs-3 {
+    fill: rgb(33, 113, 181)
+}
+
+.cs-2 {
+    fill: rgb(8, 81, 156)
+}
+
+.cs-1 {
+    fill: rgb(8, 48, 107)
+}
+
+/* Heatmap navigation */
+
+/* Bar chart*/
+.bar:hover {
+    fill: orange;
+}
+
+#tooltip {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: x-small;
+}
+
+/* Expanded view */
+span.tab-space {
+    padding-left: 3em;
+}
+
+/* P100 GCP Toggle*/
+.toggle {
+    font-weight: bold;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.untoggle {
+    font-weight: normal;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Autocomplete view */
+
+.left-panel {
+    float: left;
+}
+
+.Peptide {
+    font-weight: normal;
+    background-color: #8c564b;
+}
+
+.Replicate {
+    font-weight: normal;
+    background-color: #7B4EA4;
+}
+
+.Perturbation {
+    font-weight: normal;
+    background-color: #7B4EA4;
+}
+
+.Cell {
+    font-weight: normal;
+    background-color: #337AB7;
+}
+
+.PeptideB {
+    border-color: #8c564b;
+}
+
+.ReplicateB {
+    border-color: #9467bd;
+}
+
+.CellB {
+    border-color: #337AB7;
+}
+
+.mid-panel {
+    float: left;
+    margin-left: 15px;
+    margin-top: 0px;
+    /*font-size: 10px;*/
+}
+
+/* Tags input */
+
+.bootstrap {
+    padding-left: 0px;
+}
+
+.bootstrap .tags {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.bootstrap .tags.focused {
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.bootstrap .tags .tag-item {
+    background: #428bca;
+    border: 1px solid #357ebd;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.bootstrap .tags .tag-item.selected {
+    background: #d9534f;
+    border: 1px solid #d43f3a;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.bootstrap .tags .tag-item button {
+    background: transparent;
+    color: #000;
+    opacity: .4;
+}
+
+.bootstrap .autocomplete {
+    border-radius: 4px;
+}
+
+.bootstrap .autocomplete .suggestion-item.selected {
+    color: #262626;
+    background-color: #e9e9e9;
+}
+
+.bootstrap .autocomplete .suggestion-item em {
+    font-weight: bold;
+    /*background-color: #e9e9e9;*/
+}
+
+.bootstrap .autocomplete .suggestion-item.selected em {
+    color: #262626;
+    /*background-color: #e9e9e9;*/
+}
+
+/* GitHub Ribbon */
+
+.ribbon {
+    background-color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    /* top left corner */
+    position: absolute;
+    right: -60px;
+    top: 45px;
+    /* 45 deg ccw rotation */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /* shadow */
+    -webkit-box-shadow: 0 0 10px #888;
+    -moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+    z-index: 999;
+}
+
+.ribbon a {
+    border: 1px solid #fffafe;
+    color: #357ebd;
+    display: block;
+    font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 1px 0;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    /* shadow */
+    text-shadow: 0 0 1px #B1A5A5;
+}
+
+/* Selected Tab */
+.thisTab {
+    color: #23527c;
+    text-decoration: underline;
+
+}
