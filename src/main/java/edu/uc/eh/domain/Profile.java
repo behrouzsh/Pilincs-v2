@@ -4,6 +4,7 @@ import edu.uc.eh.datatypes.AssayType;
 import edu.uc.eh.datatypes.ListAndJsonWrapper2;
 import edu.uc.eh.datatypes.ListWrapper;
 import org.apache.commons.math3.stat.StatUtils;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -38,6 +39,7 @@ public class Profile implements Serializable {
     @Lob
     private ListAndJsonWrapper2 correlatedVector;
 
+    @Length(max=1000)
     private String positiveCorrelation;
 
     @Lob

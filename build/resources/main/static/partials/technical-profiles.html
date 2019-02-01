@@ -1,0 +1,90 @@
+<br/>
+<form class="col-sm-4" style="padding-left: 0px;">
+
+    <div class="controls">
+
+        <!-- Tags -->
+        <tags-input ng-model="mainCtrl.tags"
+                    display-property="name"
+                    class="bootstrap"
+                    placeholder="Start typing a query"
+                    on-tag-added="mainCtrl.tagAddedRemoved()"
+                    on-tag-removed="mainCtrl.tagAddedRemoved()"
+                    add-from-autocomplete-only="true"
+                >
+            <auto-complete
+                    source="mainCtrl.loadTags($query)"
+                    min-length="0"
+                    load-on-empty="false"
+                    max-results-to-show="90"
+                    debounce-delay="100"
+                    template="autocomplete-template">
+            </auto-complete>
+        </tags-input>
+    </div>
+
+    <script type="text/ng-template" id="autocomplete-template">
+        <div class="left-panel">
+            <span ng-class="data.flag" class="label label-info">{{data.flag}}</span>
+        </div>
+        <div class="mid-panel">
+            <span ng-bind-html="$highlight($getDisplayText())"></span>
+        </div>
+    </script>
+</form>
+
+<div style="float:right; padding-bottom: 20px;">
+    <a ng-href="http://eh3.uc.edu/GenomicsPortals/DatasetLandingPage.do?data_set=LDS-1234&{{mainCtrl.tagsAsMatrixVariables}}" target="_blank" style="color: #337AB7;"
+       class="btn btn-default">Analyze in iLINCS</a>
+    &nbsp;
+    <a ng-href="#export/1" style="color: #337AB7;"
+       class="btn btn-default">Export</a>
+</div><br/><br/><br/>
+
+<div ng-controller="TableCtrl as technicalCtrl">
+    <!-- Technical replicates -->
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Assay</th>
+            <th>Cell</th>
+            <th>Perturbation</th>
+            <th>Time</th>
+            <th>Dose</th>
+            <th>Profile</th>
+            <th>RunId</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in pagedItems">
+            <td>{{item.assayType}}</td>
+            <td>{{item.cellId}}</td>
+            <td>{{item.pertIname}}</td>
+            <td>{{item.pertTime}}</td>
+            <td>{{item.pertDose}}</td>
+            <td>
+                <profile-barchart data="item.vector"></profile-barchart>
+            </td>
+            <td>{{item.runId}}</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <!--<td colspan="5"><div style="float:left;">Showing 10 - 20 of 122500 rows.</div>-->
+
+        <!--</td>-->
+        </tfoot>
+    </table>
+    <div style="float:right;">
+        <ul class="pagination">
+            <li ng-class="prevPageDisabled()">
+                <a href ng-click="prevPage()">« Prev</a>
+            </li>
+            <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                <a href>{{n+1}}</a>
+            </li>
+            <li ng-class="nextPageDisabled()">
+                <a href ng-click="nextPage()">Next »</a>
+            </li>
+        </ul>
+    </div>
+</div>

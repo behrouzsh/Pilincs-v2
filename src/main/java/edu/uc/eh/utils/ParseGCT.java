@@ -33,7 +33,7 @@ public class ParseGCT {
     private void savePeptidesToRepository(String url, AssayType assayType) throws IOException {
 
         List<String> labelsOfProbes = new ArrayList<>();
-
+System.out.println("111111111");
         BufferedReader reader = UtilsNetwork.downloadFile(url);
 
         String line;
@@ -122,7 +122,7 @@ public class ParseGCT {
 
         List<String> labelsOfPeptides = new ArrayList<>();
         List<String> labelsOfReplicates = new ArrayList<>();
-
+        System.out.println("222222222");
         BufferedReader reader = UtilsNetwork.downloadFile(url);
 
         String line = reader.readLine();

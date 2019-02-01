@@ -25,6 +25,7 @@ public class UtilsParse {
     private static final Logger log = LoggerFactory.getLogger(UtilsParse.class);
 
     public static Integer parsePeptideNumber(String stepOne) {
+        System.out.println("step one one");
         BufferedReader in = UtilsNetwork.downloadFile(stepOne);
         String line;
         Integer peptide = null;
@@ -59,6 +60,9 @@ public class UtilsParse {
     public static HashMap<String, Integer> parsePeptideNumbers(String stepOne, List<String> peptideIds) throws IOException {
 
         HashMap<String,Integer> output = new HashMap<>();
+        System.out.println("step one");
+        System.out.println(stepOne);
+        System.out.println("============");
         BufferedReader in = UtilsNetwork.downloadFile(stepOne);
         String line;
         Integer peptideDB = null;

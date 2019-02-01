@@ -88,93 +88,97 @@ public class ConnectPanorama {
   //*****************************
 
         ArrayList<Integer> runIds2 = new ArrayList<Integer>();
+        runIds2.add(31527);
         //runIds2.add(9024);
 
 //25241
 //runIds2.add(25241);
-runIds2.add(25265);
-runIds2.add(16048);
-runIds2.add(16046);           
-runIds2.add(16047);               
-runIds2.add(16141);  
+//runIds2.add(25265);
+//runIds2.add(16048);
+//runIds2.add(16046);
+//runIds2.add(16047);
+//runIds2.add(16141);
 
-        //runIds2.add(8772);
-        //runIds2.add(8771);
+//        runIds2.add(8772);
+//        runIds2.add(8771);
 
-runIds2.add(19772);
+//runIds2.add(19772);
                
-runIds2.add(20677);            
-runIds2.add(25454);             
-runIds2.add(25461);              
-runIds2.add(20948);              
-runIds2.add(24961);               
-runIds2.add(25011);                
-runIds2.add(25256);                
-runIds2.add(4420);                
-runIds2.add(6808);                 
-runIds2.add(9024);                
-runIds2.add(4425);              
-runIds2.add(4424);               
-runIds2.add(4442);              
-runIds2.add(4421);              
-runIds2.add(4426);             
-runIds2.add(4422);                
-runIds2.add(4431);                
-runIds2.add(4423);                
-runIds2.add(4435);                
-runIds2.add(4440);                
-runIds2.add(4520);                 
-runIds2.add(9202);                 
-runIds2.add(9206);               
-runIds2.add(8064);                
-runIds2.add(8411);              
-runIds2.add(13243);               
-runIds2.add(14018);              
-runIds2.add(4403);               
-runIds2.add(8063);                 
-runIds2.add(12200);                
-runIds2.add(8772);                
-runIds2.add(14050);                
-runIds2.add(13068);                
-runIds2.add(13923);                 
-runIds2.add(16051);              
-runIds2.add(16052);                
-runIds2.add(16355);                 
-runIds2.add(20406);                
-runIds2.add(20449);               
-runIds2.add(20875);              
-runIds2.add(3106);                 
-runIds2.add(3030);                 
-runIds2.add(3281);                
-runIds2.add(3280);                
-runIds2.add(3031);                
-runIds2.add(3063);                 
-runIds2.add(3064);                 
-runIds2.add(3083);                
-runIds2.add(3085);                 
-runIds2.add(4165);                
-runIds2.add(6650);                 
-runIds2.add(6874);                
-runIds2.add(6872);                 
-runIds2.add(6873);                 
-runIds2.add(9209);                 
-runIds2.add(7988);                 
-runIds2.add(8060);                 
-runIds2.add(12201);
-                
-runIds2.add(8512);
-                
-runIds2.add(13921);
-                
-runIds2.add(13069);
-                 
-runIds2.add(12202);
-                
-runIds2.add(8771);
-                 
-runIds2.add(14026);
+//runIds2.add(20677);
+//runIds2.add(25454);
+//runIds2.add(25461);
+//runIds2.add(20948);
+//runIds2.add(24961);
+//runIds2.add(25011);
+//runIds2.add(25256);
+//runIds2.add(4420);
+//runIds2.add(6808);
+//runIds2.add(9024);
+//runIds2.add(4425);
+//runIds2.add(4424);
+//runIds2.add(4442);
+//runIds2.add(4421);
+//runIds2.add(4426);
+//runIds2.add(4422);
+//runIds2.add(4431);
+//runIds2.add(4423);
+//runIds2.add(4435);
+//runIds2.add(4440);
+//runIds2.add(4520);
+//runIds2.add(9202);
+//runIds2.add(9206);
+//runIds2.add(8064);
+//runIds2.add(8411);
+//runIds2.add(13243);
+//runIds2.add(14018);
+//runIds2.add(4403);
+//runIds2.add(8063);
+//runIds2.add(12200);
+//runIds2.add(8772);
+//runIds2.add(14050);
+//runIds2.add(13068);
+//runIds2.add(13923);
+//runIds2.add(16051);
+//runIds2.add(16052);
+//runIds2.add(16355);
+//runIds2.add(20406);
+//runIds2.add(20449);
+//runIds2.add(20875);
+//runIds2.add(3106);
+//runIds2.add(3030);
+//runIds2.add(3281);
+//runIds2.add(3280);
+//runIds2.add(3031);
+//runIds2.add(3063);
+//runIds2.add(3064);
+//runIds2.add(3083);
+//runIds2.add(3085);
+//runIds2.add(4165);
+//runIds2.add(6650);
+//runIds2.add(6874);
+//runIds2.add(6872);
+//runIds2.add(6873);
+//runIds2.add(9209);
+//runIds2.add(7988);
+//runIds2.add(8060);
+//runIds2.add(12201);
+//
+//runIds2.add(8512);
+//
+//runIds2.add(13921);
+//
+//runIds2.add(13069);
+//
+//runIds2.add(12202);
+//
+//runIds2.add(8771);
+//
+//runIds2.add(14026);
+        System.out.println("runIds");
+        System.out.println(runIds);
 
-        return runIds2;
+
+        return runIds;
 
         //*****************************
         //return runIds;
@@ -198,7 +202,9 @@ runIds2.add(14026);
 
         String stepOne = String.format(peptideInternalIdsUrl, assayType, sb.toString(), runId);
 
+
         output= UtilsParse.parsePeptideNumbers(stepOne, peptideIds);
+
 
         return output;
     }
