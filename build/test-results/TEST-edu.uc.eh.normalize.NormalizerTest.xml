@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.uc.eh.normalize.NormalizerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-02-01T21:11:46" hostname="linux-zoak" time="0.001">
+  <properties/>
+  <testcase name="testQuantileNormalize" classname="edu.uc.eh.normalize.NormalizerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
